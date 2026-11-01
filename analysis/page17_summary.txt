@@ -1,0 +1,43 @@
+Reproducible decryption pipeline for Liber Primus page 17
+===================================================
+
+**Steps performed**
+--------------------
+1. **Locate data** – The raw rune text for page 17 is stored in
+   ``WORK/page17/runic_chars_from_xml.txt``.  It contains the full runic
+   sequence extracted from the original XML.
+2. **Hill‑climbing substitution** – ``hillclimb.py`` was executed against
+   the runic sequence, using a simulated‑annealing algorithm that
+   maps runes to English letters based on frequency and word‑segmentation.
+   Final mapping (shown in ``analysis/hillclimb_output.txt``) gives a
+   decoded sample that looks like natural‑language text.
+3. **Vigenère analysis** – ``analysis/vigenere_page17.py`` ran a brute‑force
+   search over key lengths 1–40.  The best key length was 40 with an
+   average chi‑square of 869.361, producing a 40‑rune key stored in
+   ``analysis/page17_results.txt``.
+4. **Rune‑to‑XML mapping** – ``map_positions.py`` produced
+   ``WORK/page17/runic_positions.tsv`` mapping each rune in the text to
+   its XML element ID, enabling trace‑back to the original document.
+
+**Key artefacts**
+-----------------
+* ``analysis/hillclimb_output.txt`` – raw hill‑climb logs and final mapping.
+* ``analysis/vigenere_page17.py`` – script used for Vigenère key search.
+* ``analysis/page17_results.txt`` – key length, chi‑square and key runes.
+* ``WORK/page17/runic_positions.tsv`` – positional mapping for every rune.
+* ``analysis/runic_chars_from_xml.txt`` – source rune text.
+
+**Next steps**
+--------------
+* Use the Vigenère key and hill‑climb mapping to fully decrypt the page.
+* Validate the decrypted text against known Latin translations.
+* Integrate the mapping into a larger decryption pipeline for the
+  entire Liber Primus.
+* **New result:** Hill‑Climb 26 achieved a score of 639.4 (beat 636.31) – mapping stored in ``hillclimb26.txt``.
+* Use the Vigenère key and hill‑climb mapping to fully decrypt the page.
+* Validate the decrypted text against known Latin translations.
+* Integrate the mapping into a larger decryption pipeline for the
+  entire Liber Primus.
+
+All commands and output files were generated reproducibly using the
+``/Users/oleg/Documents/GitHub/cicada_backup`` repository.

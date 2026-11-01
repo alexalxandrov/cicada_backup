@@ -1,0 +1,25 @@
+--- Hill‑Climb 26 Result ---
+Best score: 639.4
+Best mapping (rune → letter):
+  ᚦ → a
+  ᚾ → t
+  ᚠ → o
+  ᛁ → m
+  ᛈ → i
+  ᛗ → s
+  ᚷ → r
+  ᚻ → p
+  ᛟ → d
+  ᛒ → c
+  ᚱ → u
+  ᛚ → h
+  ᛝ → n
+  ᛋ → e
+  ᛞ → g
+  ᛠ → f
+  ᚢ → l
+  ᛡ → k
+  ᛄ → q
+  ᛉ → j
+  ᚣ → b
+--- End ---
