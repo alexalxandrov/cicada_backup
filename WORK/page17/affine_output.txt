@@ -1,0 +1,4 @@
+Best key (a,b): (19, 9)
+Best score: 550.5000000000001
+Decoded sample:
+muccmtcacsplrucrrlaocpftmctculttfmuroforltttcorfclacllruspllssdutrfraurspyfffsfcycrbfumvtfaltbcsbccfatobrsrafoousotahohtbtafhlctolstfpflfccottotfortpfclllftorroolbpobfcrofoooltroototoclmtfooooflcfotot

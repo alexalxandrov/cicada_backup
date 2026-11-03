@@ -1,0 +1,5 @@
+Best composite score: 519.0599999999998
+Best Vigenère key (shifts): (2, 5)
+Best Caesar shift: 0
+Decoded sample:
+atsoaasesmmnutsdunobslbaaonoinnabvidtgtdranasbugsnoornutglrngmltndbdotummubgbmbofourbtasngonnrsmcosgoatrumuebbttgbnewbwacaogwnsatngablbnbosbnatabbuamgsnrnbatdubtncltrboubbbtbraubtatatorvngtbtbbnsgtata

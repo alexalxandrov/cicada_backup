@@ -1,0 +1,7 @@
+Best shift: 15
+Best score: 468.9599999999999
+Best mapping:
+{'ᚠ': 'f', 'ᚢ': 'g', 'ᚣ': 'y', 'ᚦ': 'p', 'ᚱ': 'b', 'ᚷ': 'v', 'ᚻ': 'e', 'ᚾ': 't', 'ᛁ': 'a', 'ᛄ': 'o', 'ᛈ': 'i', 'ᛉ': 'n', 'ᛋ': 's', 'ᛒ': 'h', 'ᛗ': 'r', 'ᛚ': 'd', 'ᛝ': 'l', 'ᛞ': 'c', 'ᛟ': 'u', 'ᛠ': 'm', 'ᛡ': 'w'}
+
+Decoded sample:
+beaabtavaudirearrivpadftbataeittfberpfpritttaprfaivaiireudiiuusetrfrverudcfffufacarhfebntfvithauhaafvtphrurvfppeuptvlplthtvfliatpiutfdfifaapttptfprtdfaiiiftprrppihdphfarpfpppitrpptptpaibtfppppfiafptpt

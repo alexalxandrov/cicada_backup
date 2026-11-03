@@ -1,0 +1,3 @@
+Best key length: 40
+Average chi‑square: 869.361
+Best key (runes): ᚻᛠᚳᚢᛚᛖᛄᚱᛇᛝᛒᛠᚻᛒᚪᛄᛇᛟᛠᛗᚳᛗᚷᚷᛗᚠᚢᚩᛖᛞᚣᛞᚾᚩᛡᚪᛠᛈᚾᚫ

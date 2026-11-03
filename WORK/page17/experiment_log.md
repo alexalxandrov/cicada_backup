@@ -68,3 +68,84 @@ nuoonaomophiruorrimsohtanoaouiaatnurstsriaaaosrtoimoiiruphiippwuartrmurphftttpto
 4. Use the bigram analysis to construct a partial mapping and run a guided hill‑climb.
 
 All scripts and data are located in the :file:`WORK/page17` directory.
+## 7. Affine cipher brute‑force (21‑letter alphabet)
+* Script: :file:`affine_analysis.py`
+* Output file: :file:`affine_output.txt`
+* Best key (a,b): **(19, 9)**
+* Best score: **550.50**
+* Decoded sample (first 200 chars):
+```
+muccmtcacsplrucrrlaocpftmctculttfmuroforltttcorfclacllruspllssdutrfraurspyfffsfcycrbfumvtfaltbcsbccfatobrsrafoousotahohtbtafhlctolstfpflfccottotfortpfclllftorroolbpobfcrofoooltroototoclmtfooooflcfotot
+```
+\t* Verdict: Still gibberish; affine mapping alone does not produce intelligible English.
+## 8. Composite Vigenère (2‑letter key) + Caesar (0‑20) search
+\t* Script: :file:`vigenere_caesar_combo.py`
+\t* Output file: :file:`vigenere_caesar_output.txt`
+\t* Best composite score: **519.06**
+\t* Best Vigenère key (shifts): **(2, 5)**
+\t* Best Caesar shift: **0**
+\t* Decoded sample (first 200 chars):
+\t```
+\tatsoaasesmmnutsdunobslbaaonoinnabvidtgtdranasbugsnoornutglrngmltndbdotummubgbmbofourbtasngonnrsmcosgoatrumuebbttgbnewbwacaogwnsatngablbnbosbnatabbuamgsnrnbatdubtncltrboubbbtbraubtatatorvngtbtbbnsgtata
+\t```
+\t* Verdict: Still gibberish; composite approach did not solve the cipher.
+## 11. Planned KenLM 5‑gram scorer for hill‑climb
+* Rationale: The segmented word‑frequency scorer tends to over‑penalise
+  legitimate words that do not appear in the top‑20 k word list.  A 5‑gram
+  language model (e.g., KenLM) will better capture English n‑gram
+  statistics and may allow the hill‑climb to escape local optima.
+* Next steps:
+  1. Build a KenLM 5‑gram model from the 1‑M‑word Common Crawl
+     dataset (or use an existing pre‑trained model).
+  2. Replace the `seg_score` function in `hillclimb26.py` with a
+     `kenlm_score` that returns the log‑probability of the decoded
+     text.  Normalize by text length to compare across runs.
+  3. Re‑run `hillclimb26.py` with the new scorer and record the
+     best score, mapping and decoded sample.
+  4. If improvement is observed, test the same approach on the
+     `guided_hillclimb26.py` and `vigenere_caesar_len3.py` outputs.
+* Estimated time: ~30 min to build the model locally, plus 10 min to
+  rerun the hill‑climb.
+* Script: :file:`guided_hillclimb26.py`
+* Output file: :file:`guided_hillclimb26_output.txt`
+* Initial score from Caesar mapping: **468.96**
+* Best score after guided hill‑climb: **468.96** (no improvement)
+* Best mapping: same as the pure Caesar mapping (see output file)
+* Decoded sample (first 200 chars):
+```
+beaabtavaudirearrivpadftbataeittfberpfpritttaprfaivaiireudiiuusetrfrverudcfffufacarhfebntfvithauhaafvtphrurvfppeuptvlplthtvfliatpiutfdfifaapttptfprtdfaiiiftprrppihdphfarpfpppitrpptptpaibtfppppfiafptpt
+```
+* Verdict: No improvement over the initial Caesar‑based hill‑climb.
+## 6. Caesar shift brute‑force (21‑letter alphabet)
+* Script: :file:`vigenere_caesar_len3.py`
+* Output file: :file:`vigenere_caesar_len3_output.txt`
+* Best composite score: **520.11**
+* Best Vigenère key (shifts): **(3, 2, 5)**
+* Best Caesar shift: **0**
+* Decoded sample (first 200 chars):
+```
+atsoaasesmmnutsdunobslbaaonoinnabvidtgtdranasbugsnoornutglrngmltndbdotummubgbmbofourbtasngonnrsmcosgoatrumuebbttgbnewbwacaogwnsatngablbnbosbnatabbuamgsnrnbatdubtncltrboubbbtbraubtatatorvngtbtbbnsgtata
+```
+* Verdict: Still gibberish; composite approach did not solve the cipher.
+## 6. Caesar shift brute‑force (21‑letter alphabet)
+* Script: :file:`caesar_analysis.py`
+* Output file: :file:`caesar_output.txt`
+* Best shift: **15**
+* Best score: **468.96**
+* Best mapping: `{'ᚠ': 'f', 'ᚢ': 'g', 'ᚣ': 'y', 'ᚦ': 'p', 'ᚱ': 'b', 'ᚷ': 'v', 'ᚻ': 'e', 'ᚾ': 't', 'ᛁ': 'a', 'ᛄ': 'o', 'ᛈ': 'i', 'ᛉ': 'n', 'ᛋ': 's', 'ᛒ': 'h', 'ᛗ': 'r', 'ᛚ': 'd', 'ᛝ': 'l', 'ᛞ': 'c', 'ᛟ': 'u', 'ᛠ': 'm', 'ᛡ': 'w'}`
+* Decoded sample (first 200 chars):
+```
+beaabtavaudirearrivpadftbataeittfberpfpritttaprfaivaiireudiiuusetrfrverudcfffufacarhfebntfvithauhaafvtphrurvfppeuptvlplthtvfliatpiutfdfifaapttptfprtdfaiiiftprrppihdphfarpfpppitrpptptpaibtfppppfiafptpt
+```
+* Verdict: Still gibberish; the mapping does not reveal coherent English.
+## 5. Hill‑climb mono‑alphabetic mapping (26‑letter alphabet, 5 restarts, 20k steps)
+* Script: :file:`hillclimb26.py`
+* Settings: RESTARTS=5, STEPS=20,000
+* Output file: :file:`hillclimb26_output.txt` (redirected)
+* Best score: **645.33**
+* Best mapping: `{'ᚦ': 'i', 'ᚾ': 's', 'ᚠ': 'a', 'ᛁ': 'p', 'ᛈ': 'm', 'ᛗ': 't', 'ᚷ': 'h', 'ᚻ': 'c', 'ᛟ': 'r', 'ᛒ': 'o', 'ᚱ': 'u', 'ᛚ': 'f', 'ᛝ': 'd', 'ᛋ': 'q', 'ᛞ': 'b', 'ᛠ': 'e', 'ᚢ': 'l', 'ᛡ': 'g', 'ᛄ': 'n', 'ᛉ': 'k', 'ᚣ': 'j'}`
+* Decoded sample (first 200 chars):
+```
+ucppusphprfmtcpttmhipfasupspcmssauctiaitmssspitapmhpmmtcrfmmrrqcstathctrfbaaarapbptoacuksahmsoproppahsiotrthaiicrishdidsoshadmpsimrsafamappissisaitsfapmmmasittiimofioaptiaiiimstiisisipmusaiiiiampaisis
+```
+* Verdict: Still gibberish; mapping likely far from correct. Further experiments needed.

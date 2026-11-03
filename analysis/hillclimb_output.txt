@@ -1,0 +1,7 @@
+initial score 489.07000000000016
+step 0, best 501.9800000000003
+step 5000, best 653.5299999999996
+step 10000, best 653.5599999999996
+step 15000, best 653.5599999999996
+final best score 653.559999999000000
+mapping: {\n+    'ᚦ': 'i',\n+    'ᚾ': 's',\n+    'ᚠ': 'a',\n+    'ᛁ': 'm',\n+    'ᛈ': 'o',\n+    'ᛗ': 't',\n+    'ᚷ': 'l',\n+    'ᚻ': 'c',\n+    'ᛟ': 'r',\n+    'ᛒ': 'e',\n+    'ᚱ': 'f',\n+    'ᛚ': 'd',\n+    'ᛝ': 'n',\n+    'ᛋ': 'p',\n+    'ᛞ': 'y',\n+    'ᛠ': 'g',\n+    'ᚢ': 'u',\n+    'ᛡ': 'h',\n+    'ᛄ': 'w',\n+    'ᛉ': 'v',\n+    'ᚣ': 'b'\n+}\n+decoded sample: fcmmfsmlmrdotcmttolimdasfmsmcossafctiaitosssmitamolmootcrdoorrpcstatlctrdyaaaramymteacfvsalosemremmalsietrtlaiicrislninseslanomsiorsadaoammissisaitsdamoooasittiioedieamtiaiiiostiisisimofsaiiiiaomaisis

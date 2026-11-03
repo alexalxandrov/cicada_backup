@@ -48,8 +48,8 @@ best_mapping = init_map.copy()
 best_score = seg_score(decode(best_mapping))
 print('initial score', best_score)
 
-RESTARTS = 1
-STEPS = 100_000
+RESTARTS = 10
+STEPS = 200_000
 for restart in range(RESTARTS):
     mapping = init_map.copy()
     T = 1.0
