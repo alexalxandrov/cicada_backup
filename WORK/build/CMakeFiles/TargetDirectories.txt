@@ -1,0 +1,5 @@
+/Users/oleg/Documents/GitHub/cicada_backup/WORK/build/CMakeFiles/crypto_driver.dir
+/Users/oleg/Documents/GitHub/cicada_backup/WORK/build/CMakeFiles/test_crypto.dir
+/Users/oleg/Documents/GitHub/cicada_backup/WORK/build/CMakeFiles/test.dir
+/Users/oleg/Documents/GitHub/cicada_backup/WORK/build/CMakeFiles/edit_cache.dir
+/Users/oleg/Documents/GitHub/cicada_backup/WORK/build/CMakeFiles/rebuild_cache.dir

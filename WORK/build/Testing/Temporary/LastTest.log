@@ -1,0 +1,19 @@
+Start testing: Nov 06 21:44 MSK
+----------------------------------------------------------
+1/1 Testing: CryptoUnitTest
+1/1 Test: CryptoUnitTest
+Command: "/Users/oleg/Documents/GitHub/cicada_backup/WORK/build/test_crypto"
+Directory: /Users/oleg/Documents/GitHub/cicada_backup/WORK/build
+"CryptoUnitTest" start time: Nov 06 21:44 MSK
+Output:
+----------------------------------------------------------
+Crypto test passed.
+<end of output>
+Test time =   0.04 sec
+----------------------------------------------------------
+Test Passed.
+"CryptoUnitTest" end time: Nov 06 21:44 MSK
+"CryptoUnitTest" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Nov 06 21:44 MSK

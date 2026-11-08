@@ -15,15 +15,15 @@ mark_as_advanced(boost_atomic_DIR)
 get_filename_component(_BOOST_CMAKEDIR "${CMAKE_CURRENT_LIST_DIR}/../" REALPATH)
 
 # If the computed and the original directories are symlink-equivalent, use original
-if(EXISTS "/Users/oleg/Documents/GitHub/cicada_backup/boost_extract/boost_1_84_0/stage/lib/cmake")
-  get_filename_component(_BOOST_CMAKEDIR_ORIGINAL "/Users/oleg/Documents/GitHub/cicada_backup/boost_extract/boost_1_84_0/stage/lib/cmake" REALPATH)
+if(EXISTS "/Users/oleg/Documents/GitHub/cicada_backup/workspace/boost_staged/lib/cmake")
+  get_filename_component(_BOOST_CMAKEDIR_ORIGINAL "/Users/oleg/Documents/GitHub/cicada_backup/workspace/boost_staged/lib/cmake" REALPATH)
   if(_BOOST_CMAKEDIR STREQUAL _BOOST_CMAKEDIR_ORIGINAL)
-    set(_BOOST_CMAKEDIR "/Users/oleg/Documents/GitHub/cicada_backup/boost_extract/boost_1_84_0/stage/lib/cmake")
+    set(_BOOST_CMAKEDIR "/Users/oleg/Documents/GitHub/cicada_backup/workspace/boost_staged/lib/cmake")
   endif()
   unset(_BOOST_CMAKEDIR_ORIGINAL)
 endif()
 
-get_filename_component(_BOOST_INCLUDEDIR "${_BOOST_CMAKEDIR}/../../../" ABSOLUTE)
+get_filename_component(_BOOST_INCLUDEDIR "${_BOOST_CMAKEDIR}/../../../../boost_extract/boost_1_84_0/" ABSOLUTE)
 get_filename_component(_BOOST_LIBDIR "${_BOOST_CMAKEDIR}/../" ABSOLUTE)
 
 include(${CMAKE_CURRENT_LIST_DIR}/../BoostDetectToolset-1.84.0.cmake)
