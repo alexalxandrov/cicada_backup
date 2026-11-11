@@ -145,16 +145,31 @@ def analyse_key_lengths(cipher, max_len=40):
     return best_overall
 
 # ------------------------------------------------------------
-# Main execution
+# Decrypt using the best key and output plaintext
 # ------------------------------------------------------------
+
+def decrypt_with_key(cipher, key_shifts):
+    """Decrypt the rune cipher using the provided key shifts.
+    """
+    plain_indices = []
+    key_len = len(key_shifts)
+    for i, c in enumerate(cipher):
+        idx = rune_to_idx[c]
+        shift = key_shifts[i % key_len]
+        plain_idx = (idx - shift) % len(unique_runes)
+        plain_indices.append(plain_idx)
+    return ''.join(idx_to_rune[i] for i in plain_indices)
 
 if __name__ == "__main__":
     cipher = runes
     best = analyse_key_lengths(cipher, 40)
+    key_shifts = best[2]
+    plaintext = decrypt_with_key(cipher, key_shifts)
     output = (
         f"Best key length: {best[0]}\n"
         f"Average chi‑square: {best[1]:.3f}\n"
-        f"Best key (runes): {''.join(idx_to_rune[s] for s in best[2])}\n"
+        f"Best key (runes): {''.join(idx_to_rune[s] for s in key_shifts)}\n"
+        f"\nDecrypted text:\n{plaintext}\n"
     )
     print(output)
     # Log to file

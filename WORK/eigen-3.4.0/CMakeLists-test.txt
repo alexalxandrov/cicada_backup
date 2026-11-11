@@ -1,0 +1,5 @@
+cmake_minimum_required(VERSION 3.20)
+project(EigenTest LANGUAGES CXX)
+find_package(Eigen3 3.1.0 CONFIG REQUIRED)
+add_executable(eigen_test test_eigen.cpp)
+target_link_libraries(eigen_test PRIVATE Eigen3::Eigen)

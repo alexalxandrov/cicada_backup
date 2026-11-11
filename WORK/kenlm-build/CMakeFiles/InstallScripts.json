@@ -1,0 +1,15 @@
+{
+	"InstallScripts" : 
+	[
+		"/Users/oleg/Documents/GitHub/cicada_backup/kenlm-build/cmake_install.cmake",
+		"/Users/oleg/Documents/GitHub/cicada_backup/kenlm-build/util/cmake_install.cmake",
+		"/Users/oleg/Documents/GitHub/cicada_backup/kenlm-build/util/double-conversion/cmake_install.cmake",
+		"/Users/oleg/Documents/GitHub/cicada_backup/kenlm-build/util/stream/cmake_install.cmake",
+		"/Users/oleg/Documents/GitHub/cicada_backup/kenlm-build/lm/cmake_install.cmake",
+		"/Users/oleg/Documents/GitHub/cicada_backup/kenlm-build/lm/common/cmake_install.cmake",
+		"/Users/oleg/Documents/GitHub/cicada_backup/kenlm-build/lm/builder/cmake_install.cmake",
+		"/Users/oleg/Documents/GitHub/cicada_backup/kenlm-build/lm/filter/cmake_install.cmake",
+		"/Users/oleg/Documents/GitHub/cicada_backup/kenlm-build/lm/interpolate/cmake_install.cmake"
+	],
+	"Parallel" : false
+}
